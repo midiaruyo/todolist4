@@ -1,0 +1,196 @@
+{
+  "info": {
+    "_postman_id": "fdf775f5-8a47-4925-968e-fc735e83fdd2",
+    "name": "todolist",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36682163"
+  },
+  "item": [
+    {
+      "name": "首頁測試 ( GET )",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "首頁測試 ( POST )",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "首頁測試 ( GET+錯誤網址 )",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/111",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "111"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "首頁測試 ( OPTIONS）",
+      "request": {
+        "method": "OPTIONS",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "新增待辦清單 ( POST )",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\":\"今天要樂活1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/todos",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "取得所有待辦清單 ( GET ALL )",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/todos",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "更新單筆待辦 ( PATCH ONE )",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\":\"今天要樂活～～測試～～@@@@\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/todos/12f745c8-3624-4bca-8d78-1c6264ab824b",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "todos",
+            "12f745c8-3624-4bca-8d78-1c6264ab824b"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除單筆待辦 (DELETE ONE )",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/todos/12f745c8-3624-4bca-8d78-1c6264ab824b",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "todos",
+            "12f745c8-3624-4bca-8d78-1c6264ab824b"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除所有待辦清單 ( DELETE ALL )",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/todos",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
