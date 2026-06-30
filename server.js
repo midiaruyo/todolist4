@@ -40,7 +40,11 @@ const httpListener = (req, res) => {
         errorHandle(res, "程式碼輸入錯誤，新增失敗");
       }
     });
-  } else if (req.url === "/todos" && req.method === "OPTIONS") {
+  } else if (
+    req.url === "/todos" &&
+    req.url.startsWith("/todos/") &&
+    req.method === "OPTIONS"
+  ) {
     res.writeHead(200, httpHead);
     res.end();
   } else if (req.url.startsWith("/todos/") && req.method === "PATCH") {
