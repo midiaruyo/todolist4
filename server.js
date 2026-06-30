@@ -3,17 +3,8 @@ const http = require("http");
 const PORT = process.env.PORT;
 const { v4: uuidv4 } = require("uuid");
 const { errorHandle } = require("./errorHandle");
-
+const { httpHead } = require("./config");
 const todos = [];
-
-const httpHead = {
-  "ALLOW-ACCESS-CONTROL-ORIGIN": "*",
-  "ALLOW-ACCESS-CONTROL-METHOD": "GET,POST,OPTIONS,PATCH,DELETE",
-  "ALLOW-ACCESS-CONTROL-HEADER":
-    "Content-Type,Content-length,authorization,X-Requested-With",
-  "Content-Type": "application/json",
-};
-
 const httpListener = (req, res) => {
   if (req.url === "/todos" && req.method === "GET") {
     res.writeHead(200, httpHead);

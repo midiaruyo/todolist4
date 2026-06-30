@@ -1,10 +1,4 @@
-const httpHead = {
-    "ALLOW-ACCESS-CONTROL-ORIGIN": "*",
-    "ALLOW-ACCESS-CONTROL-METHOD": "GET,POST,OPTIONS,PATCH,DELETE",
-    "ALLOW-ACCESS-CONTROL-HEADER":
-      "Content-Type,Content-length,authorization,X-Requested-With",
-    "Content-Type": "application/json",
-  };
+const { httpHead } = require("./config");
   
 function errorHandle(res,msg)
 {
